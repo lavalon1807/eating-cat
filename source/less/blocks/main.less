@@ -1,0 +1,68 @@
+@media (min-width: 320px) {
+  .main-wrapper {
+    background: url(../img/pattern.png);
+    box-shadow:
+      inset 0 -140px 50px -30px rgba(0, 0, 0, 0.5),
+      inset 0 220px 60px -30px rgba(0, 0, 0, 0.5);
+    height: 977px;
+  }
+
+  .main__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 320px;
+  }
+
+  .main__title {
+    font-family: "PT sans", "regular", serif;
+    margin: 0px 15px 0 15px;
+    font-size: 36px;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .main__item {
+    position: relative;
+    margin-top: 29px;
+  }
+
+  .main__sentense {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .main__sentense--buy {
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+  }
+
+  .main__sentense--lose {
+    color: #ffff66;
+  }
+}
+
+@media (min-width: 820px) {
+  .main__container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main__container {
+    width: 1120px;
+    justify-content: space-between;
+  }
+
+  .main__title {
+    padding-top: 107px;
+  }
+}

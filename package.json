@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lavalon1807/escape-room.git"
+    "url": "git+https://github.com/lavalon1807/eating-cat.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lavalon1807/escape-room/issues"
+    "url": "https://github.com/lavalon1807/eating-cat/issues"
   },
-  "homepage": "https://github.com/lavalon1807/escape-room#readme",
+  "homepage": "https://github.com/lavalon1807/eating-cat#readme",
   "dependencies": {
     "gulp": "^4.0.2",
     "hoek": "^6.1.3",

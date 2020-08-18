@@ -1,10 +1,10 @@
 @media (min-width: 320px) {
-  .main-wrapper {
+  .main__wrapper {
     background: url(../img/pattern.png);
+    background-size: 100%;
     box-shadow:
       inset 0 -140px 50px -30px rgba(0, 0, 0, 0.5),
-      inset 0 220px 60px -30px rgba(0, 0, 0, 0.5);
-    height: 977px;
+      inset 0 168px 60px -30px rgba(0, 0, 0, 0.5);
   }
 
   .main__list {
@@ -20,6 +20,133 @@
     width: 320px;
   }
 
+  .main__block {
+    position: relative;
+  }
+
+  .main__item {
+    background-color: #ffffff;
+    width: 320px;
+    height: 480px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .main__fone:before {
+    border-right: 4px solid #1698d9;
+    width: 40px;
+    height: 62px;
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    left: -13px;
+    top: 7px;
+    background: url(../img/pattern.png);
+    background-position: 14px 21px;
+    z-index: 1111;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  label input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+
+  // Если выбранн товар - рамка подсвечивает красным.
+  // А при наведении светлокрасным.
+  label input[type="checkbox"]:checked {
+    & ~ .stats:before {
+      border: 4px solid #d91667;
+    }
+    &:hover ~ .stats:before {
+      border: 4px solid #e62e7a;
+    }
+  }
+
+  // Если выбранн товар - псевдоэлемент(рамка - уголок слева вверху) подсвечивает красным,
+  // А при наведении светлокрасным.
+  label input[type="checkbox"]:checked {
+    & ~ .main__fone:before {
+      border-right: 4px solid #d91667;
+    }
+    &:hover ~ .main__fone:before {
+      border-right: 4px solid #e62e7a;
+    }
+  }
+
+  // Если выбранн товар - масса товара подсвечивает красным.
+  // А при наведении светлокрасным.
+  label input[type="checkbox"]:checked {
+    & ~ .stats .stats-weight {
+      background-color: #d91667;
+    }
+    &:hover ~ .stats .stats-weight {
+      background-color: #e62e7a;
+    }
+  }
+
+  .main__sentense--sentense {
+    display: block;
+  }
+
+  .main__sentense--have,
+  .main__sentense--lose {
+    display: none;
+  }
+
+  //Если выбран товар пишет снизу название
+  label input[type="checkbox"]:checked {
+    & ~ .main__sentense--sentense {
+      display: none;
+    }
+    & ~ .main__sentense--lose {
+      display: none;
+    }
+    & ~ .main__sentense--have {
+      display: block;
+    }
+  }
+
+  //Если товар отсутствует пишет снизу
+  label input[type="checkbox"]:disabled {
+    & ~ .main__sentense--sentense {
+      display: none;
+    }
+    & ~ .main__sentense--have {
+      display: none;
+    }
+    & ~ .main__sentense--lose {
+      display: block;
+    }
+  }
+
+  // Если нет товара - карточка прозрачная
+  // А псевдоэлемент (рамка-уголок слева вверху)-серая
+  // Подпись о отсутствия товара
+  label input[type="checkbox"]:disabled {
+    & ~ .stats {
+      opacity: 0.2;
+    }
+    & ~ .main__fone:before {
+      border-right-color: #c1c1c1;
+    }
+  }
+
+  // Если нет товара - рамка и масса товара серым цветом
+  label input[type="checkbox"]:disabled {
+    & ~ .stats:before {
+      border-color: #000000;
+    }
+    & ~ .stats .stats-weight {
+      background-color: #000000;
+    }
+  }
+
   .main__title {
     font-family: "PT sans", "regular", serif;
     margin: 0px 15px 0 15px;
@@ -29,20 +156,18 @@
     text-align: center;
   }
 
-  .main__item {
-    position: relative;
-    margin-top: 29px;
-  }
-
   .main__sentense {
-    font-size: 13px;
-    line-height: 16px;
+    font-family: "PT Sans", "Regular", serif;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 14px;
     text-align: center;
   }
 
   .main__sentense--buy {
     color: #1698d9;
     border-bottom: 1px dashed #1698d9;
+    cursor: pointer;
   }
 
   .main__sentense--lose {
@@ -57,6 +182,10 @@
 }
 
 @media (min-width: 1200px) {
+  .main__wrapper {
+    height: 977px;
+  }
+
   .main__container {
     width: 1120px;
     justify-content: space-between;

@@ -1,4 +1,3 @@
-@media (min-width: 320px) {
   .main__wrapper {
     background: url(../img/pattern.png);
     background-size: 100%;
@@ -7,17 +6,28 @@
       inset 0 168px 60px -30px rgba(0, 0, 0, 0.5);
   }
 
+  .main {
+    // display: flex;
+    // justify-content: center;
+    // width: 320px;
+  }
+
   .main__list {
-    display: flex;
-    justify-content: center;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
   }
 
   .main__container {
+    width: 320px;
+    margin: 0 auto;
+    padding-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 320px;
+  //   width: 320px;
+  //   margin: 0 auto;
+  //   justify-content: space-around;
+  //   align-items: center;
   }
 
   .main__block {
@@ -32,19 +42,19 @@
     margin-bottom: 30px;
   }
 
-  .main__fone:before {
-    border-right: 4px solid #1698d9;
-    width: 40px;
-    height: 62px;
-    content: '';
-    position: absolute;
-    transform: rotate(45deg);
-    left: -13px;
-    top: 7px;
-    background: url(../img/pattern.png);
-    background-position: 14px 21px;
-    z-index: 1111;
-  }
+  // .main__fone:before {
+  //   border-right: 4px solid #1698d9;
+  //   width: 40px;
+  //   height: 62px;
+  //   content: '';
+  //   position: absolute;
+  //   transform: rotate(45deg);
+  //   left: -13px;
+  //   top: 7px;
+  //   background: url(../img/pattern.png);
+  //   background-position: 14px 21px;
+  //   z-index: 1111;
+  // }
 
   label input[type="checkbox"] {
     position: absolute;
@@ -171,11 +181,14 @@
   .main__sentense--lose {
     color: #ffff66;
   }
-}
 
 @media (min-width: 820px) {
+
   .main__container {
-    width: 800px;
+    // display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-around;
+    width: 820px;
   }
 }
 
